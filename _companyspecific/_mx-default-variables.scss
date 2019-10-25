@@ -1,0 +1,82 @@
+//== Gray Shades
+//## Different gray shades to be used for our variables and components
+$gray-darker:                                       #222222;
+$gray-dark:                                         #333333;
+$gray:                                              #555555;
+$gray-light:                                        #888888;
+$gray-primary:                                      #D7D7D7;
+$gray-lighter:                                      #EEEEEE;
+
+//== Step 1: Brand Colors
+$brand-default:                                     #DDDDDD;
+$brand-primary:                                     #0595DB;
+$brand-inverse:                                     #252C36;
+$brand-info:                                        #48B0F7;
+$brand-success:                                     #76CA02;
+$brand-warning:                                     #F99B1D;
+$brand-danger:                                      #ED1C24;
+
+// Used for other variables
+$default-border-color:                              $gray-primary;
+
+//== Step 3: Typography
+$font-family-import:                                "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700";
+$font-family-base:                                  "Open Sans", sans-serif;
+$font-base-size:                                    14px;
+$font-base-color:                                   #555555;
+$link-color:                                        $brand-primary;
+$font-size-h1:                                      31px;
+$font-size-h2:                                      26px;
+$font-size-h3:                                      24px;
+$font-size-h4:                                      18px;
+$font-color-headers:                                #17347B;
+
+//== Step 2: UI Customization
+
+// Topbar
+$topbar-bg:                                         #FFFFFF;
+$navtopbar-border-color:                            $default-border-color;
+$topbar-border-color:                               $navtopbar-border-color;
+$topbar-minimalheight:                              60px;
+$navtopbar-color:                                   $font-base-color;
+$navbar-brand-name:                                 $default-border-color;
+$brand-logo:                                        false;
+$brand-logo-height:                                 30px;
+$brand-logo-width:                                  30px;
+
+// Sidebar
+$sidebar-bg:                                        $brand-inverse;
+$navsidebar-color:                                  #FFFFFF;
+$navsidebar-color-hover:                            $navsidebar-color;
+
+// Backgrounds
+$bg-color:                                          #FFFFFF;
+$bg-color-secondary:                                #F5F8FD;
+
+// == Old variables used in theme customizer to the new lib variables
+$font-size-default:                                 $font-base-size;
+$font-color-default:                                $font-base-color;
+$border-color-default:                              $default-border-color;
+$font-color-header:				                    $font-color-headers;
+
+
+
+//== Media queries breakpoints
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                             480px !default;
+
+// Small screen / tablet Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                             768px !default;
+
+// Medium screen / desktop Deprecated `$screen-md` as of v3.0.1
+$screen-md:                             992px !default;
+
+// Large screen / wide desktop Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                             1200px !default;
+
+// So media queries don't overlap when required, provide a maximum (used for max-width)
+$screen-xs-max:                         ($screen-sm - 1) !default;
+$screen-sm-max:                         ($screen-md - 1) !default;
+$screen-md-max:                         ($screen-lg - 1) !default;

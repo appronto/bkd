@@ -1,0 +1,220 @@
+@import "mx-default-variables";
+
+// Appronto Variables
+
+$fontweight-hairline:                                  100;
+$fontweight-extralight:                                200;
+$fontweight-light:                                     300;
+$fontweight-regular:                                   400;
+$fontweight-medium:                                    500;
+$fontweight-semibold:                                  600;
+$fontweight-bold:                                      700;
+$fontweight-extrabold:                                 800;
+$fontweight-black:                                     900;
+
+
+// Appronto default Variables
+$font-weight-h1:                          $fontweight-medium;
+$font-weight-h2:                          $fontweight-medium;
+$font-weight-h3:                          $fontweight-medium;
+$font-weight-h4:                          $fontweight-medium;
+$font-weight-h5:                          $fontweight-medium;
+$font-weight-h6:                          $fontweight-medium;
+$font-size-h5:                                      18px;
+$font-size-h6:                                      16px;
+
+
+// Appronto
+
+
+//
+// ██████╗  █████╗ ███████╗██╗ ██████╗
+// ██╔══██╗██╔══██╗██╔════╝██║██╔════╝
+// ██████╔╝███████║███████╗██║██║
+// ██╔══██╗██╔══██║╚════██║██║██║
+// ██████╔╝██║  ██║███████║██║╚██████╗
+// ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝ ╚═════╝
+//
+
+
+
+
+
+//## Clients Style guide with all colors
+/*-------------------- Put your colors here, and all the colors discovered here, then link them --------------------*/
+
+
+
+
+
+/*-------------------- Atlas Defaults --------------------*/
+// $gray-darker:                           #222; // #222; Atlas Default
+// $gray-dark:                             #333; // #333; Atlas Default
+// $gray:                                  #555; // #555; Atlas Default
+// $gray-light:                            #888; // #888; Atlas Default
+// $gray-primary:                          #d7d7d7; // #d7d7d7; Atlas Default
+// $gray-lighter:                          #eee; // #eee; Atlas Default
+
+$brand-default:                         #DDDDDD; // #DDDDDD; Atlas Default
+$brand-primary:                         #0595DB; // #0595DB; Atlas Default
+$brand-inverse:                         #252C36; // #252C36; Atlas Default
+$brand-info:                            #33ABD1; // #48B0F7; Atlas Default
+$brand-success:                         #76CA02; // #76CA02; Atlas Default
+$brand-warning:                         #f99b1d; // #f99b1d; Atlas Default
+$brand-danger:                          #ed1c24; // #ed1c24; Atlas Default
+
+$brand-active:                          $brand-primary; // AP Style
+$brand-inactive:                        $gray-primary; //AP Style
+
+$white:																							#fff; // #fff
+$white-secondary:																		#F5F8FD; // Atlas #F5F8FD; //appronto #F4F7F9;
+
+
+$text-primary:																			$gray;         //paragraph text
+$text-secondary:																	  $gray-darker;  //header text
+$text-inactive:																		  $gray-primary;
+
+
+
+
+
+//
+//  █████╗ ██████╗ ██╗   ██╗ █████╗ ███╗   ██╗ ██████╗███████╗██████╗
+// ██╔══██╗██╔══██╗██║   ██║██╔══██╗████╗  ██║██╔════╝██╔════╝██╔══██╗
+// ███████║██║  ██║██║   ██║███████║██╔██╗ ██║██║     █████╗  ██║  ██║
+// ██╔══██║██║  ██║╚██╗ ██╔╝██╔══██║██║╚██╗██║██║     ██╔══╝  ██║  ██║
+// ██║  ██║██████╔╝ ╚████╔╝ ██║  ██║██║ ╚████║╚██████╗███████╗██████╔╝
+// ╚═╝  ╚═╝╚═════╝   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝╚═════╝
+//
+
+
+
+
+
+
+/*-------------------- Menu & Nav --------------------*/
+
+
+//== background color
+$bg-color:                                          $white-secondary;
+$bg-color-secondary:                                $white;
+$border-color-default:                              rgba($text-secondary, 0.1); //$secrid-primary-black
+$border-radius-default:                             4px;
+
+
+//== Default Link Color
+$link-color:                            $brand-primary;
+$link-hover-color:                      darken($link-color, 15%);
+
+
+//== MX Menu
+$topbar-bg:                                         #FFF;
+$topbar-minimalheight:                              60px;
+$topbar-border-color:                               $border-color-default;
+
+$navigation-bg:                                     $white;
+$navigation-bg-hover:                               darken($navigation-bg, 4);
+$navigation-bg-active:                              darken($navigation-bg, 4);
+$navigation-color:                                  $brand-primary;
+$navigation-color-hover:                            $brand-primary;
+$navigation-color-active:                           $brand-primary;
+$navigation-sub-bg:                                 darken($navigation-bg, 4);
+$navigation-sub-bg-hover:                           darken($navigation-sub-bg, 4);
+$navigation-sub-bg-active:                          darken($navigation-sub-bg, 4);
+$navigation-bg-mobile:                              $navigation-bg;
+
+$sidebar-bg:                                        $brand-inverse;
+$flex-sidebar-width:                                345px; // 345px Default //Approntostyle
+$flex-sidebar-logo-height:                          40px; //40px default // Approntostyle
+$flex-sidebar-logo-width:                           40px; //40px default // Approntostyle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------- Fonts and Typography --------------------*/
+
+
+//importing fonts
+$font-family-import:                      "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800";
+
+$font-family-brand:                       'Open Sans', sans-serif;
+$font-family-base:                        'Open Sans', sans-serif;
+$font-family-mono:                        Consolas, monaco, monospace;
+
+
+$font-color-header:                       $text-secondary;
+$font-base-color:                         $text-primary;
+$link-color:                              $brand-info;
+$font-size-h1:                            50px;
+$font-weight-h1:                          $fontweight-extrabold;
+//$font-size-h2:                            32px;
+//$font-weight-h2:                          $fontweight-bold;
+//$font-size-h3:                            24px;
+//$font-weight-h3:                          $fontweight-bold;
+//$font-size-h4:                            20px;
+//$font-weight-h4:                          $fontweight-extrabold;
+//$font-size-h5:                            18px;
+//$font-weight-h5:                          $fontweight-extrabold;
+//$font-size-h6:                            16px;
+//$font-weight-h6:                          $fontweight-semibold;
+//$font-base-size:                          16px;
+
+
+//== labels
+//$label-default-bg:                      $brand-default;
+//$label-primary-bg:                      $brand-primary;
+//$label-info-bg:                         $light-sky-blue;
+//$label-success-bg:                      $brand-success;
+//$label-warning-bg:                      $brand-warning;
+//$label-danger-bg:                       $brand-danger;
+
+// Text Color
+//$label-default-color:                   $font-color-default;
+//$label-primary-color:                   #FFF;
+//$label-info-color:                      #FFF;
+//$label-success-color:                   #FFF;
+//$label-warning-color:                   #FFF;
+//$label-danger-color:                    #FFF;
+
+
+
+
+
+/*-------------------- Buttons --------------------*/
+
+
+//$btn-font-weight:                     400;
+
+//$btn-default-bg:                       $white;
+//$btn-inverse-bg:                        $dark-grey-blue;
+//$btn-primary-bg:                        $dark-sky-blue;
+//$btn-info-bg:                           $brand-info;
+//$btn-success-bg:                        $brand-success;
+//$btn-warning-bg:                        $brand-warning;
+//$btn-danger-bg:                         $brand-danger;
+
+//$btn-default-color:                     $battleship-grey;
+//$btn-inverse-color:                     #FFF;
+//$btn-primary-color:                     #FFF;
+//$btn-info-color:                        #FFF;
+//$btn-success-color:                     #FFF;
+//$btn-warning-color:                     #FFF;
+//$btn-danger-color:                      #FFF;
+
+//$btn-default-border-color:              $default-btn-border-grey ;
+//$btn-inverse-border-color:              $inverse-btn-bg;
+//$btn-info-border-color:                 $btn-info-bg;
+//$btn-success-border-color:              $btn-success-bg;
+//$btn-warning-border-color:              $btn-warning-bg;
+//$btn-danger-border-color:               $btn-danger-bg;
