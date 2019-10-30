@@ -2,6 +2,30 @@
 $layout-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
 $brand-active: $brand-success;
 
+
+//## Clients Style guide with all colors
+/*-------------------- Put your colors here, and all the colors discovered here, then link them --------------------*/
+
+$BKD-primaire-blauw:            #0060ac;
+$BKD-primaire-black:            #050703;
+
+$BKD-secondaire-blauw:          #009edb;
+$BKD-secondaire-groen:          #38ae95;
+$BKD-secondaire-groen-light:    #81c1a9;
+$BKD-secondaire-grijs:          #dedede;
+
+
+$BKD-proposal-green:            #5FD152;
+$BKD-proposal-blue:             #1EABCD;
+$BKD-proposal-purple:           #B9419D;
+
+$design-selection-bg:           #F7F7F7;
+$design-warning:                #FF771F;
+$design-bg-dark:                #606F7B;
+$design-gradient-start-bg-dark: #6F7A82;
+$design-gradient-end-bg-dark:   #526372;
+
+
 @import "../lib/variables";
 @import "_ps__typography";
 @import "_ps__icn";
