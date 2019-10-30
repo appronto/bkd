@@ -1,0 +1,62 @@
+.ps_buttongroup-pagination{
+  display: flex;
+  justify-content: flex-end;
+  .mx-link{
+    padding-right: 8px;
+    color:$text-primary;
+    &.inactive{
+      color:$text-inactive;
+      cursor:default;
+    }
+  }
+}
+
+.ps_buttongroup-sort{
+  padding-top: 8px;
+  display: flex;
+  justify-content: flex-start;
+  .mx-link{
+    padding-left: 8px;
+    color:$link-color;
+    &.active{
+      color:darken($link-color, 10);
+      text-decoration: underline;
+    }
+  }
+}
+
+.ap_layout-flex_topbar .ap_togglemenu-wrap {
+  display: none;
+}
+
+.ps_formgroup-registrerenvoor{
+  display: flex;
+  align-items: center;
+  .mx-text{
+      padding-right: 8px;
+  }
+  .autoCompleteMainContainer{
+    min-width: 275px;
+  }
+}
+
+.ps_listview-item-tpi-selected {
+  background-color: #F7F7F7;
+  border-left: #FF771F;
+  margin: 10px;
+}
+
+.widget-pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-right:10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  .pagination{
+    .disabled:focus {
+      border-color: transparent;
+      background-color: transparent;
+      color: #999;
+      }
+  }
+}

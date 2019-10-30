@@ -24,8 +24,6 @@ $font-size-h5:                                      18px;
 $font-size-h6:                                      16px;
 
 
-// Appronto
-
 
 //
 // ██████╗  █████╗ ███████╗██╗ ██████╗
@@ -43,28 +41,49 @@ $font-size-h6:                                      16px;
 //## Clients Style guide with all colors
 /*-------------------- Put your colors here, and all the colors discovered here, then link them --------------------*/
 
+$BKD-primaire-blauw:            #0060ac;
+$BKD-primaire-black:            #050703;
+
+$BKD-secondaire-blauw:          #009edb;
+$BKD-secondaire-groen:          #38ae95;
+$BKD-secondaire-groen-light:    #81c1a9;
+$BKD-secondaire-grijs:          #dedede;
+
+
+$BKD-proposal-green:            #5FD152;
+$BKD-proposal-blue:             #1EABCD;
+$BKD-proposal-purple:           #B9419D;
+
+$design-selection-bg:           #F7F7F7;
+$design-warning:                #FF771F;
+$design-bg-dark:                #606F7B;
+$design-gradient-start-bg-dark: #6F7A82;
+$design-gradient-end-bg-dark:   #526372;
+
+
+
+
+
+
 
 
 
 
 /*-------------------- Atlas Defaults --------------------*/
-// $gray-darker:                           #222; // #222; Atlas Default
-// $gray-dark:                             #333; // #333; Atlas Default
-// $gray:                                  #555; // #555; Atlas Default
-// $gray-light:                            #888; // #888; Atlas Default
-// $gray-primary:                          #d7d7d7; // #d7d7d7; Atlas Default
-// $gray-lighter:                          #eee; // #eee; Atlas Default
+$gray-darker:                           $BKD-primaire-black; // #222; Atlas Default
+//$gray-dark:                             #333; // #333; Atlas Default
+//$gray:                                  #555; // #555; Atlas Default
+//$gray-light:                            #888; // #888; Atlas Default
+$gray-primary:                          $BKD-secondaire-grijs; // #d7d7d7; Atlas Default
+//$gray-lighter:                          #eee; // #eee; Atlas Default
 
-$brand-default:                         #DDDDDD; // #DDDDDD; Atlas Default
-$brand-primary:                         #0595DB; // #0595DB; Atlas Default
+$brand-default:                         $BKD-secondaire-grijs; // #DDDDDD; Atlas Default
+$brand-primary:                         $BKD-primaire-blauw; // #0595DB; Atlas Default
 $brand-inverse:                         #252C36; // #252C36; Atlas Default
-$brand-info:                            #33ABD1; // #48B0F7; Atlas Default
-$brand-success:                         #76CA02; // #76CA02; Atlas Default
-$brand-warning:                         #f99b1d; // #f99b1d; Atlas Default
-$brand-danger:                          #ed1c24; // #ed1c24; Atlas Default
-
-$brand-active:                          $brand-primary; // AP Style
-$brand-inactive:                        $gray-primary; //AP Style
+$brand-info:                            $BKD-secondaire-blauw; // #48B0F7; Atlas Default
+$brand-success:                         $BKD-secondaire-groen; // #76CA02; Atlas Default
+$brand-warning:                         $design-warning; // #f99b1d; Atlas Default
+$brand-danger:                          #D65555; // #ed1c24; Atlas Default
 
 $white:																							#fff; // #fff
 $white-secondary:																		#F5F8FD; // Atlas #F5F8FD; //appronto #F4F7F9;
@@ -96,14 +115,14 @@ $text-inactive:																		  $gray-primary;
 
 
 //== background color
-$bg-color:                                          $white-secondary;
-$bg-color-secondary:                                $white;
-$border-color-default:                              rgba($text-secondary, 0.1); //$secrid-primary-black
+$bg-color:                                          $white;
+$bg-color-secondary:                                $white-secondary;
+$border-color-default:                              #e4e5e7;
 $border-radius-default:                             4px;
 
 
 //== Default Link Color
-$link-color:                            $brand-primary;
+$link-color:                            $BKD-primaire-blauw;
 $link-hover-color:                      darken($link-color, 15%);
 
 
@@ -115,18 +134,19 @@ $topbar-border-color:                               $border-color-default;
 $navigation-bg:                                     $white;
 $navigation-bg-hover:                               darken($navigation-bg, 4);
 $navigation-bg-active:                              darken($navigation-bg, 4);
+$navigation-bg-mobile:                              $navigation-bg;
 $navigation-color:                                  $brand-primary;
 $navigation-color-hover:                            $brand-primary;
 $navigation-color-active:                           $brand-primary;
 $navigation-sub-bg:                                 darken($navigation-bg, 4);
 $navigation-sub-bg-hover:                           darken($navigation-sub-bg, 4);
 $navigation-sub-bg-active:                          darken($navigation-sub-bg, 4);
-$navigation-bg-mobile:                              $navigation-bg;
 
 $sidebar-bg:                                        $brand-inverse;
 $flex-sidebar-width:                                345px; // 345px Default //Approntostyle
-$flex-sidebar-logo-height:                          40px; //40px default // Approntostyle
-$flex-sidebar-logo-width:                           40px; //40px default // Approntostyle
+$flex-sidebar-logo-height:                          22px; //60px default // Approntostyle
+$flex-sidebar-logo-width:                           100px; //60px default // Approntostyle
+
 
 
 
@@ -156,16 +176,16 @@ $font-family-mono:                        Consolas, monaco, monospace;
 $font-color-header:                       $text-secondary;
 $font-base-color:                         $text-primary;
 $link-color:                              $brand-info;
-$font-size-h1:                            50px;
+$font-size-h1:                            64px;
 $font-weight-h1:                          $fontweight-extrabold;
-//$font-size-h2:                            32px;
-//$font-weight-h2:                          $fontweight-bold;
-//$font-size-h3:                            24px;
-//$font-weight-h3:                          $fontweight-bold;
+$font-size-h2:                            40px;
+$font-weight-h2:                          $fontweight-extrabold;
+$font-size-h3:                            24px;
+$font-weight-h3:                          $fontweight-bold;
 //$font-size-h4:                            20px;
 //$font-weight-h4:                          $fontweight-extrabold;
-//$font-size-h5:                            18px;
-//$font-weight-h5:                          $fontweight-extrabold;
+$font-size-h5:                            18px;
+$font-weight-h5:                          $fontweight-bold;
 //$font-size-h6:                            16px;
 //$font-weight-h6:                          $fontweight-semibold;
 //$font-base-size:                          16px;

@@ -1,0 +1,771 @@
+@import "../../lib/variables";
+@import "_ps__icn.scss";
+
+// here all your custom styling
+@import "layouts/ap_layout-flex-legacy";
+.mx-tabcontainer .mx-tabcontainer-tabs{
+  margin-bottom: 0;
+}
+
+
+//IE FF nav fix
+.mx-navigationtree .navbar-inner > ul > li > a{
+  padding-left: 65px;
+  margin-left: 0px;
+  img, .glyphicon {
+    position: absolute;
+    left: 15px;
+  }
+  .glyphicon {
+    margin-top: 10px;
+  }
+}
+
+.ap_popuplayout + .mx-underlay{
+  background-color: #000;
+      opacity: 0.6;
+}
+
+.ap_layout-flex_topbar{
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 5px solid $BKD-secondaire-groen-light;
+}
+
+
+
+
+
+
+
+.ps_hometeler{
+  &.ap_layout-flex > .mx-placeholder .ap_layout-flex_content, .ap_layout-flextopbar > .mx-placeholder .ap_layout-flex_content {
+      background-color: $design-bg-dark;
+      background-attachment: fixed;
+      background-image:
+          linear-gradient(
+            to bottom right,
+            $design-gradient-start-bg-dark, $design-gradient-end-bg-dark
+          );
+  }
+}
+
+.ps_hometeler .ps_meldingen{
+  padding: 10px;
+}
+
+//default Scrollcontainer layouts
+.ps_scrollcontainer-layout-wrap{
+  display: flex;
+  .ps_scrollcontainer-layout-item-nav{
+    width: 25%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .ps_scrollcontainer-layout-item-content{
+    width: 75%;
+    overflow-y: auto;
+    .ps_scrollcontainer-layout-item-nav{
+      background-color: $bg-color-secondary;
+    }
+  }
+
+  .ps_scrollcontainer-layout-item{
+    .ps_scrollcontainerwrap{
+      //max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      .ps_scrollcontainer-head{
+        border-bottom: 1px solid $border-color-default;
+        margin: 0 15px 15px;;
+        padding: 0;
+        //display: flex;
+        .ps_icn{
+          display: inline-block;
+          margin-right: 10px;
+        }
+        h3{
+          display: inline-block;
+          margin-right: 10px;
+        }
+
+      }
+      .ps_scrollcontainer-main{
+        height: calc(100vh - 60px);
+        //background-color: red;
+        overflow-y: auto;
+        .mx-listview-item{
+          border-left: 8px solid transparent;
+          &.mx-focus, &:hover{
+            background-color: $design-selection-bg;
+            border-left: 8px solid $brand-success;
+            color: $brand-success;
+          }
+        }
+      }
+    }
+  }
+  .ps_scrollcontainer-layout-item-content{
+    .ps_header{
+      display: flex;
+      align-items: center;
+
+      .ps_icn{
+        width: 48px;
+        height: 48px;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      .ps_header-text{
+        //background-color: red;
+        margin: 20px 0;
+        .ps_header-title-line{
+          display: flex;
+          align-items: baseline;
+
+          h1, h2, a{
+            margin: 0;
+            margin-right: 10px;
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+// heights
+.ps_scrollcontainer-layout-wrap{ // ps_scrollcontainer-layout-wrap-partijen
+  //height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
+  //background-color: green;
+  .ps_scrollcontainer-layout-item{
+    .ps_scrollcontainerwrap{
+      //height: calc(100vh - 60px);
+      max-height: calc(100vh - 60px);
+      //background-color: red;
+    }
+  }
+  .ps_scrollcontainer-layout-item.ps_scrollcontainer-layout-item-nav{
+    z-index: 100;
+  }
+  .ps_scrollcontainer-layout-item.ps_scrollcontainer-layout-item-content{
+    //height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
+    //background-color: blue;
+    overflow-y: hidden;
+    //height: 100vh;
+    z-index: 51;
+    .ps_scrollcontainer-layout-wrap{
+
+
+      .ps_scrollcontainer-layout-item.ps_scrollcontainer-layout-item-nav{
+        .ps_scrollcontainerwrap{}
+        .ps_scrollcontainer-main{
+          height: calc(100vh - 301px);
+          //background-color: orange;
+          //max-height: calc(100vh - 296px);
+        }
+      }
+      .ps_scrollcontainer-layout-item.ps_scrollcontainer-layout-item-content{
+        //background-color: yellow;
+        max-height: calc(100vh - 220px);
+        overflow: auto;
+        padding-bottom: 40px;
+        padding-top: 40px;
+      }
+    }
+  }
+}
+
+
+.ps_scrollcontainer-layout-item.ps_scrollcontainer-layout-item-nav{
+  .ps_scrollcontainerwrap{ //ps_scrollcontainerwrap-partijen
+    .ps_scrollcontainer-head{}
+    .ps_scrollcontainer-main{}
+  }
+}
+
+
+.ps_scrollcontainer-layout-item.ps_scrollcontainer-layout-item-content{
+  .ps_header{}
+  .ps_scrollcontainer-layout-wrap{}
+}
+
+
+
+
+
+
+
+// calc width of layout per label
+//when main
+.ps_scrollcontainer-layout-wrap-partijen{
+  > .ps_scrollcontainer-layout-item-nav{
+    width: 16%;
+  }
+  > .ps_scrollcontainer-layout-item-content{
+    width: calc(100% - 16%);
+  }
+}
+
+.ps_scrollcontainer-layout-wrap-locatie{
+  > .ps_scrollcontainer-layout-item-nav{
+    width: 33%;
+  }
+  > .ps_scrollcontainer-layout-item-content{
+    width: calc(100% - 33%);
+  }
+}
+
+//when secondary
+.ps_scrollcontainer-layout-wrap{
+  //partijen
+  .ps_scrollcontainer-layout-wrap-partijen{
+    > .ps_scrollcontainer-layout-item-nav{
+      width: 25%;
+    }
+    > .ps_scrollcontainer-layout-item-content{
+      width: calc(100% - 25%);
+    }
+  }
+
+  //locatie
+  .ps_scrollcontainer-layout-wrap-locatie{
+    > .ps_scrollcontainer-layout-item-nav{
+      width: 33%;
+    }
+    > .ps_scrollcontainer-layout-item-content{
+      width: calc(100% - 33%);
+    }
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+//uniek styles for scrollcontainers
+.ps_scrollcontainerwrap-partijen{
+  //background-color: green;
+}
+
+.ps_scrollcontainerwrap-locatie{
+    //background-color: brown;
+}
+
+
+.ps_scrollcontainer-layout-item-content .ps_scrollcontainer-layout-item-content{
+  //background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  .ps_contentwrap{
+      //background-color: green;
+      min-width: 400px;
+      width: 70%;
+      .ps_content-headinfo{
+        display: flex;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $border-color-default;
+        margin-bottom: 10px;
+        .ps_content-headinfo-item{
+          width: 50%;
+          display: flex;
+          .mx-dataview-content{
+            display: flex;
+            align-items: center;
+            .ps_icn {
+              width: 24px;
+              display: inline-block;
+              margin-right: 10px;
+              //background-color: blue;
+            }
+            .ps_content-headinfo-text{
+              //width: calc(100% - 24px);
+              //background-color: yellow;
+              h5{
+                margin: 0;
+              }
+            }
+
+          }
+        }
+      }
+  }
+}
+
+
+.ps_scrollcontainerwrap{
+
+
+  //locatie scrollcontainer
+  &.ps_scrollcontainerwrap-locatie{
+    .ps_scrollcontainer-head{}
+    .ps_scrollcontainer-main{
+      .ps_item-wrap{
+        padding: 20px 20px;
+        .ps_title-wrap{
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .active{}
+          .title{
+            font-weight: $fontweight-semibold;
+          }
+        }
+        &.active{
+          .title{
+            color: $brand-success;
+          }
+        }
+        .ps_sub-wrap{
+          .mx-listview-item{
+            margin: 10px;
+            .sub{
+            }
+          }
+          a{
+            margin-left: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  //locatie scrollcontainer
+  &.ps_scrollcontainerwrap-partijen{
+    .ps_scrollcontainer-head{}
+    .ps_scrollcontainer-main{
+      .ps_item-wrap{
+        padding: 10px 15px;
+        .ps_schermomshrijving, .ps_gewas{
+          font-weight: $fontweight-semibold;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+.ps_card-homepage{
+  margin-top: 100px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: all 0.3s ease;
+  transform: translateY(0px);
+  overflow: visible;
+  &:hover{
+    box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.16);
+    transform: translateY(-5px);
+  }
+
+  .ps_card-hompage-icn{
+     //position: absolute;
+     margin-top: -40px;
+     background-color: $white;
+     width: 90px;
+     height: 80px;
+     border-radius: 8px;
+     box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.16);
+     background-size: 44px;
+     background-repeat: no-repeat;
+     background-position: center;
+     img{
+       display: none;
+     }
+  }
+
+
+  .ps_card-hompage-introtext{
+    margin-top: 80px;
+  }
+  .ps_card-hompage-title{
+    margin-top: 10px;
+    width: 100%;
+    padding: 0 10px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    //background-color: green;
+    //text-overflow: ellipsis;
+
+    /* Required for text-overflow to do anything */
+    //white-space: nowrap;
+    //white-space: pre-line;
+    //overflow: hidden;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+  .ps_card-hompage-maintext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    height: 60px;
+    text-align: center;
+  }
+
+
+  .btn{
+    width: 100%;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: $white;
+    margin-top: 90px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: darken($gray-primary, 20);
+    border: 1px solid darken($gray-primary, 20);
+    border-radius: 0 0 8px 8px;
+
+  }
+}
+
+.ps_card-homepage.ps_card-homepage-1{
+  h2{
+    color: $brand-primary;
+  }
+  &:hover .btn{
+    background-color: $brand-primary;
+    border: 1px solid $brand-primary;
+  }
+}
+
+.ps_card-homepage.ps_card-homepage-2{
+  h2{
+    color: $brand-info;
+  }
+  &:hover .btn{
+    background-color: $brand-info;
+    border: 1px solid $brand-info;
+  }
+}
+
+.ps_card-homepage.ps_card-homepage-3{
+  h2{
+    color: $brand-success;
+  }
+  &:hover .btn{
+    background-color: $brand-success;
+    border: 1px solid $brand-success;
+  }
+}
+
+.ps_card-homepage.ps_card-homepage-4{
+  h2{
+    color: $BKD-secondaire-groen-light;
+  }
+  &:hover .btn{
+    background-color: $BKD-secondaire-groen-light;
+    border: 1px solid $BKD-secondaire-groen-light;
+  }
+}
+
+.card.ps_card-inpopup{
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: none;
+  border: 1px solid $border-color-default;
+  transition: all 0.3s ease;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+  &:hover{
+    box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.16);
+    transform: translateY(-5px);
+    border: 1px solid $link-color;
+  }
+
+  img{
+    width: 110px;
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .ps_textblock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+.ps_shoppingpopup{
+  &.modal-dialog .modal-content{
+    border: 0px;
+    .modal-body{
+      padding: 0 0 0px;
+      margin: 0 0px;
+    }
+  }
+}
+
+.ps_shoppingpopup .row {
+  padding: 0;
+  margin: 0;
+  [class*="col-md"] {
+    padding: 0;
+    margin: 0;
+  }
+
+  .ap_buttongroup-footer{
+      border-top: 1px solid $border-color-default;
+      padding: 10px 15px;
+  }
+}
+
+.ps_shoppingpopup-header{
+  padding: 0 15px;
+}
+
+.ps_shoppingpopup-filter{
+  background-color: rgba(0,0,0,0.05);
+  padding:  15px;
+  border-bottom: 1px solid $border-color-default;
+}
+
+.ps_shoppingpopup-filterview{
+  padding: 0 15px;
+}
+
+.ps_shoppingpopup-list{
+  background-color: rgba(0,0,0,0.05);
+  padding: 15px 15px;
+}
+
+.mx-navigationtree .navbar-inner > ul > li > a img{
+  width: 24px;
+  margin-left: 4px;
+  margin-right: 17px;
+}
+
+.ps_scrollcontainer-layout-wrap .ps_warning-wrap{
+  //background-color: red;
+  opacity: .5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 250px;
+  text-align: center;
+  font-size: 16px;
+  img{
+    height: 48px;
+    width: 48px;
+    margin-bottom: 10px;
+  }
+
+}
+
+.select2-container--default .select2-selection--single{
+  height: 37px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  line-height: 36px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+ height: 36px;
+}
+
+.ap_wizard {
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-top: -20px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px;
+}
+
+.ap_layout-flex_topbar.ap_shadow{
+        //box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid $gray-primary;
+}
+
+//jdb - 30-04-2019 - css ivm highlighten van geselecteerde partij/perceel
+.ps_listview-item-selected {
+  background-color: #F7F7F7;
+  border-left: $brand-success;
+  color: $brand-success;
+}
+
+.mx-link{
+  color: $BKD-primaire-blauw;
+}
+
+.btn, .mx-button {
+  border-radius: 0;
+  border-width: 2px;
+  //font-size: 20px;
+  font-weight: $fontweight-semibold;
+  padding: 0.5em 1em;
+}
+
+.btn, .btn-default{
+  background-color: $white;
+  border-color: $brand-primary;
+  color: $brand-primary;
+  &:hover{
+    background-color: $brand-primary;
+    color: $white;
+    border-color: $brand-primary;
+  }
+}
+
+.btn.btn-primary{
+  background-color: $BKD-primaire-blauw;
+  border-color: $BKD-primaire-blauw;
+  color: $white;
+  &:hover{
+    background-color: darken($BKD-primaire-blauw, 10);
+  }
+}
+
+.btn.btn-success{
+  background-color: $brand-success;
+  border-color: $brand-success;
+  color: $white;
+  &:hover{
+    background-color: $brand-success;
+    color: $white;
+    border-color: $brand-success;
+  }
+}
+
+.btn.btn-danger{
+  background-color: $brand-danger;
+  border-color: $brand-danger;
+  color: $white;
+  &:hover{
+    background-color: $brand-danger;
+    color: $white;
+    border-color: $brand-danger;
+  }
+}
+
+.mx-dataview.row-right > .mx-dataview-content{
+  display: flex !important;
+  align-items: center !important;
+  flex-flow: row !important;
+  justify-content: flex-end !important;
+}
+
+/*
+.ap_header .title, h1 {
+    background-color: $brand-primary;
+    border: 10px solid $brand-primary;
+    padding: 2px;
+    padding-left: 13.6px;
+    padding-right: 13.6px;
+    display: inline-block;
+    line-height: 34px;
+    font-size: 25px !important;
+    color: white;
+    font-weight: $fontweight-semibold;
+}
+*/
+
+.mx-datagrid .mx-datagrid-body-table .mx-datagrid-body tr.selected td, .mx-datagrid .mx-datagrid-body-table .mx-datagrid-body tr.selected:hover td{
+  background-color: $brand-primary !important;
+  color: $white;
+}
+
+.ap_table-header + .mx-listview{
+  ul{
+    li.mx-listview-item{
+      table{
+        table-layout: fixed;
+         tr{
+          > td{
+            .mx-listview{
+              height: auto;
+              width: 100%;
+              ul{
+                width: 100%;
+                overflow: hidden;
+                display: flex;
+                flex-wrap: wrap;
+                //height: 200px;
+                li.mx-listview-item{
+                  //border: 1px solid red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//fixes an issue where if
+.ps_scrollcontainer-layout-wrap .mx-tabcontainer .mx-tabcontainer-content{
+    .ps_scrollcontainer-main{
+      //background-color: green;
+      height: calc(100vh - 224px);
+    }
+}
+
+//list view with search should have sticky header
+.mx-listview{
+  .mx-listview-searchbar{
+      background-color: $white;
+      position: absolute;
+      z-index: 20;
+      width: inherit;
+      padding-left: 10px;
+  }
+  .mx-listview-searchbar + .mx-list{
+      padding-top: 50px;
+  }
+}
+
+.ps_scrollcontainerwrap-partijen{
+  .mx-listview{
+    .mx-listview-searchbar{
+        width: 15%;
+    }
+  }
+}
+
+.ps_scrollcontainerwrap-locatie{
+  .mx-listview{
+    .mx-listview-searchbar{
+        width: 24%;
+    }
+  }
+}
+
+
+@import "_ps_projectspecific_paul.scss";

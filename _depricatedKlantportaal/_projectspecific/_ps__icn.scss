@@ -1,0 +1,47 @@
+.ps_icn{
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  img{
+    display: none;
+  }
+}
+
+
+.ps_icn-teelt{
+  background-image:  url(../../../img/icn/plant-tree.svg);
+}
+
+.ps_icn-locatie{
+  background-image:  url(../../../img/icn/location-pin-2.svg);
+}
+
+.ps_icn-partijen{
+  background-image:  url(../../../img/icn/flower-5.svg);
+}
+
+.ps_icn-veld{
+  background-image:  url(../../../img/icn/field-sun.svg);
+}
+
+.ps_icn-cal{
+  background-image:  url(../../../img/icn/calendar-2.svg);
+}
+
+.ps_icn-cal-no{
+  background-image:  url(../../../img/icn/calendar-2-no.svg);
+}
+
+.ps_icn-lab{
+  background-image:  url(../../../img/icn/science-beaker.svg);
+}
+
+.ps_icn-mega{
+  background-image:  url(../../../img/icn/megaphone-1.svg);
+}
+
+.ps_icn-notepad{
+  background-image:  url(../../../img/icn/new-notepad-checklist.svg);
+}
