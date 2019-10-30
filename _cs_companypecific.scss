@@ -1,0 +1,73 @@
+//variables
+$layout-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+$brand-active: $brand-success;
+
+@import "../lib/variables";
+@import "_ps__typography";
+@import "_ps__icn";
+@import "_ps__btn";
+@import "_ps__layout";
+
+
+//@import "../../lib/variables";
+
+// @import "../layouts/ap_layout-flex-legacy";
+
+// here all your custom styling
+
+.mx-listview .mx-listview-item.selected{
+  background-color: $brand-active !important;
+  color: $white;
+}
+
+.mx-listview{
+  .mx-listview-item, .mx-listview-item:nth-child(2n+1){
+    background-color: inherit;
+    &:hover{
+      background-color: inherit;
+    }
+  }
+}
+
+.mx-listview:not(.mx-listview-selectable){
+  ul{
+    li{
+      cursor: pointer;
+    }
+    .mx-listview-item:hover, .mx-listview-item:nth-child(2n+1):hover{
+      background-color:  lighten($brand-active, 50);
+    }
+  }
+}
+
+.ps_wizard-pagewrap{
+  background-color: $bg-color-secondary;
+}
+
+//add this to default theme to fix navdropdown going behind items
+.ap_flexlayoutgrid-pagewrap>div.mx-placeholder>div.mx-placeholder div.mx-layoutgrid.ap_flexlayoutgrid{
+  z-index: 0;
+}
+.navbar-nav>li>.dropdown-menu{
+  z-index: 100;
+}
+
+//add this to default theme to fix wierd header behaviour such as in wizard
+.card .ap_header .title, .modal-body .ap_header .title, .col-md-8 .ap_header .title{
+  padding-bottom: 0px;
+  + .sub{
+    padding-bottom: 28px;
+  }
+}
+
+
+
+//Refactor into UI-Framework
+// fixed brand logo
+.brand-logo {
+    background-image: url(../../sass/custom/_companyspecific/img/logo.svg);
+}
+//fixes card spacing when no icn
+div.mx-layoutgrid.ap_flexlayoutgrid>.row>div:nth-child(2) .card .ap_header{
+  display: block;
+}

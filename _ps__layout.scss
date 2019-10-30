@@ -1,0 +1,177 @@
+.ap_topnav{
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-bottom: 5px solid $BKD-secondaire-groen-light;
+}
+
+div.mx-layoutgrid.ap_flexlayoutgrid{ // yellow
+  > .row{
+    > div:nth-child(1){
+      box-shadow: $layout-shadow;
+    }
+    > div:nth-child(2){
+      //background-color: purple;
+    }
+    > div:nth-child(3){
+      //background-color: blue;
+    }
+  }
+}
+
+.col-md-3, .col-md-4{
+  .ap_header{
+    padding: 0 0 15px;
+    min-height: auto;
+  }
+}
+
+div.mx-layoutgrid.ap_flexlayoutgrid{ // yellow
+  > .row{
+    > div:nth-child(1){
+      box-shadow: $layout-shadow;
+      z-index: 100;
+
+    }
+    > div:nth-child(2){
+      .mx-tabcontainer .mx-tabcontainer-tabs {
+        margin-bottom: 0px;
+      }
+    }
+    > div:nth-child(3){
+      //background-color: blue;
+    }
+  }
+}
+
+//determanes height of scrollable items
+
+div.mx-layoutgrid.ap_flexlayoutgrid{ // yellow
+  > .row{
+    > div:nth-child(2){
+      .mx-tabcontainer .mx-tabcontainer-tabs {
+        margin-bottom: 0px;
+      }
+      .tab-content.mx-tabcontainer-content{
+        .ps_scrollablelayout{
+          > .row{
+            > div{
+              height: calc(100vh - 226px);
+
+            }
+            > div:nth-child(1){
+              background-color: $bg-color-secondary;
+              box-shadow: $layout-shadow;
+              z-index: 75;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// makes collumnes scrollable
+.ps_scrollablelayout{
+  > .row{
+    > div{
+      padding-top: 15px;
+      overflow-y: auto;
+    }
+  }
+}
+
+
+// relates to the PT_overviewpage - for the main overview for locations and cultivars
+// ::top level classes::
+// mx-page  ap_flexlayoutgrid-pagewrap ps_overview-pagewrap ps_scrollablelayout-pagewrap
+// ::secondary classes::
+// ap_flexlayoutgrid
+
+.ap_flexlayoutgrid-pagewrap.ps_overview-pagewrap.ps_scrollablelayout-pagewrap{
+  .ap_flexlayoutgrid > .row {
+    > div:nth-child(1){}
+    > div:nth-child(2){}
+  }
+}
+
+//adds sticky header to main layout
+.ap_flexlayoutgrid-pagewrap.ps_overview-pagewrap.ps_scrollablelayout-pagewrap{
+  .ap_flexlayoutgrid > .row {
+    > div:nth-child(1){
+      display: flex;
+      padding: 0;
+      > div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        > .ps_stickyheader{
+          flex-shrink: 0;
+          padding: 15px;
+
+        }
+        > .mx-listview{
+          height: 100%;
+          overflow-y: auto;
+        }
+      }
+    }
+    > div:nth-child(2){}
+  }
+}
+
+// adds sticky header to sub layout
+.ap_flexlayoutgrid-pagewrap.ps_overview-pagewrap.ps_scrollablelayout-pagewrap{
+  .ap_flexlayoutgrid .ps_scrollablelayout > .row{
+    > div{
+      //width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      > .ps_stickyheader{
+        flex-shrink: 0;
+        padding: 15px;
+      }
+      > .mx-listview{
+        height: 100%;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+//adds topbar to show which enviroment you are in.
+.ps_enviroment-accpprod, .ps_enviroment-accp{
+  border-bottom: 4px solid red;
+  height: 64px;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.ps_enviroment-accp{
+  border-bottom: 4px solid orange;
+}
+
+.ps_enviroment-prod{
+  display: none;
+}
+
+
+
+.ap_flexlayoutgrid>.row>.col-md-2:nth-child(1){
+  background-color: $white;
+  //box-shadow: none !important;
+  .ap_buttongroup-subnav{
+    border-bottom: none;
+    background-color: inherit;
+    padding-left: 0px;
+      .mx-link{
+        display: block;
+        color: $text-primary;
+      }
+      .mx-link+.mx-link{
+        margin-left: 0;
+      }
+  }
+}

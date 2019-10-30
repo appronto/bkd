@@ -1,0 +1,58 @@
+
+.mx-link{
+  color: $BKD-primaire-blauw;
+}
+
+.btn, .mx-button {
+  border-radius: 0;
+  border-width: 2px;
+  //font-size: 20px;
+  font-weight: $fontweight-semibold;
+  padding: 0.5em 1em;
+}
+
+.btn, .btn-default{
+  background-color: $white;
+  border-color: $brand-primary;
+  color: $brand-primary;
+  &:hover{
+    background-color: $brand-primary;
+    color: $white;
+    border-color: $brand-primary;
+  }
+}
+
+.btn.btn-primary{
+  background-color: $BKD-primaire-blauw;
+  border-color: $BKD-primaire-blauw;
+  color: $white;
+  &:hover{
+    background-color: darken($BKD-primaire-blauw, 10);
+  }
+}
+
+.btn.btn-success{
+  background-color: $brand-success;
+  border-color: $brand-success;
+  color: $white;
+  &:hover{
+    background-color: $brand-success;
+    color: $white;
+    border-color: $brand-success;
+  }
+}
+
+.btn.btn-danger{
+  background-color: $brand-danger;
+  border-color: $brand-danger;
+  color: $white;
+  &:hover{
+    background-color: $brand-danger;
+    color: $white;
+    border-color: $brand-danger;
+  }
+}
+
+.btn.btn-inactive{
+  opacity: .5;
+}
